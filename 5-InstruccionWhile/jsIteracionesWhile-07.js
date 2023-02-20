@@ -10,9 +10,20 @@ function mostrar()
 	contador=0;
 	acumulador=0;
 	respuesta='si';
+	
+	usuarioRespuesta = prompt("quiere ingresar un numero?");
+
+	while(respuesta == usuarioRespuesta)
+	{
+		contador++;
+		numero = prompt("ingrese un numero");
+		numero = parseInt(numero);
+		acumulador = numero + acumulador;
+		usuarioRespuesta = prompt("quiere ingresar un numero?");
+	}
 
 
-	txtIdSuma.value=acumulador;
-	txtIdPromedio.value=acumulador/contador;
+	document.getElementById("txtIdSuma").value=acumulador;
+	document.getElementById("txtIdPromedio").value=acumulador/contador;
 
 }//FIN DE LA FUNCIÓN
